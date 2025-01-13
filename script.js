@@ -28,4 +28,13 @@ console.log(graph);
 
 //Creates an array of empty arrays
 const adjList = Array.from({length: V},() => []);
+
+function addListEdge(adjList, i, j) {
+    adjList[i].push(j);
+    adjList[j].push(i); //an undirected adjacency list
+}
+
+addListEdge(adjList, 0, 1);
+
+console.log("Adjacency List:");
 console.log(adjList);
