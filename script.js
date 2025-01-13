@@ -1,6 +1,9 @@
 //Number of vertices - which determines grid rows/columns
 const V = 4;
 
+//----------------------------------------------------------------------
+//UNDIRECTED GRAPH
+
 //Creates an empty V x V graph
 let graph = Array.from({length: V}, ()=> Array(V).fill(0));
 
@@ -17,3 +20,12 @@ addEdge(graph, 2, 3);
 
 console.log("Graph:")
 console.log(graph);
+
+
+//---------------------------------------------------------------------
+
+//UNDIRECTED ADJACENCY LIST
+
+//Creates an array of empty arrays
+const adjList = Array.from({length: V},() => []);
+console.log(adjList);
