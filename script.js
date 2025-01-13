@@ -10,3 +10,10 @@ function addEdge(graph, a, b) {
     graph[b][a] = 1; // an undirected graph
 }
 
+addEdge(graph, 0, 1);
+addEdge(graph, 0, 2);
+addEdge(graph, 1, 2);
+addEdge(graph, 2, 3);
+
+console.log("Graph:")
+console.log(graph);
