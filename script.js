@@ -44,10 +44,15 @@ addListEdge(adjList, 2, 4);
 console.log("Adjacency List:");
 console.log(adjList);
 
+//---------------------------------------------------------------------
+
+//BREADTH FIRST SEARCH ON AN ADJACENCY LIST (CAN ALSO APPLY TO GRAPH)
+
 function doBFS(adjList, start) {
     const visited = Array(size).fill(false);
     const queue = [];
 
+    //Mark the starting vertex as visited and enqueue it
     visited[start] = true;
     queue.push(start);
 
@@ -56,10 +61,11 @@ function doBFS(adjList, start) {
         const current = queue.shift();
         console.log(current);
 
-        //Get all adjacent vertices of the dequeued vertex. If an adjacent has not been
-        //visited, mark it visited and enqueue it
+        //Go through all adjacent vertices of the dequeued vertex
         for(const node of adjList[current]) {
+            //If a particular vertex(node) in the adjacency list has not been visited:
             if(!visited[node]) {
+                //mark it visited & enqueue it
                 visited[node] = true;
                 queue.push(node);
             }
